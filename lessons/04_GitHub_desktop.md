@@ -12,16 +12,7 @@ author: "Meeta Mistry, Heather Wick"
 
 ## Getting Started with Git using a GUI (Graphical User Interface)
 
-Long-time users of Git often use the command-line user interface (CLI), i.e. a Terminal. However, there are several tools that enable novices to use Git with a Graphical User Interface (GUI) (point-and-click interface). Two examples of GUIs for Git are [GitHub Desktop](https://desktop.github.com/) and [GitKraken](https://www.gitkraken.com). We will be using the former.
-
-Although there are several advantages to using Git from the command-line interface in the long run, a GUI is a great place to start with learning the basics. 
-
-> **A Note on Terminology**
-> 
-> One of the trickier aspects of using Git is the associated jargon (`repository`, `add`, `commit`, `pull`, `push`, `remote`, `detached head`). Some of the commands/terms are fairly self-explanatory, others less so, and in this workshop you will encounter both of these. [Here is a glossary of associated terms](https://help.github.com/articles/github-glossary/), however it is best to pick up terminology while learning how to use GitHub.
-
-### Register for a GitHub Account
-
+We will use [GitHub Desktop](https://desktop.github.com/) for working with Git. 
 Since we are going to be using [GitHub](https://github.com/) along with [GitHub Desktop](https://desktop.github.com/) you will need to register for an account on GitHub if we don’t already have one. 
 
 ### Install GitHub Desktop
@@ -44,7 +35,7 @@ Since we are going to be using [GitHub](https://github.com/) along with [GitHub 
     <img src="../img/2.GHD_setup3.png" width="700" align="center">
 </p>
 
-4. Then you will be directed to a `Let's get started!` prompt. If you already have repositories in your GitHub account, you should see them here. You will also see options to create and clone repositories. At this point, you've configured GitHub Desktop and are ready to start working with a *repository*.
+4. Then you will be directed to a `Let's get started!` prompt. At this point, you've configured GitHub Desktop and are ready to start working with a *repository*.
 
 <p align="center">
     <img src="../img/2.GHD_setup4.png" width="700" align="center">
@@ -56,17 +47,14 @@ Since we are going to be using [GitHub](https://github.com/) along with [GitHub 
 
 ***So, what is a Git repository?***
 
-*"A Git repository is the .git/ folder inside a project (folder). This repository tracks all changes made to files in your project, building a history over time. Meaning, if you delete the .git/ folder, then you delete your project’s history."* 
--adapted from [https://blog.axosoft.com/learning-git-repository/](https://blog.axosoft.com/learning-git-repository/)
+A repository means a folder with files that you are sharing via Git. Inside the git repository folder, there is a folder called `.git`. This folder is used by Git to track all changes. If you delete the `.git` folder, you will loose all your history (!). When you create a new repo, Git will make this folder for you. 
 
-Essentially, a (project) folder is chosen to be tracked and a Git repository is initiated within it; this ensure that the contents, and the changes to the contents within that folder will be "watched" by Git.
-
-A few salient features of repositories are listed below:
+Some tips and tricks:
 * A repository can have many files and sub-folders (basically, a normal folder).
 * Best practice is to have a separate repository for each project.
-* Do not create repositories for folders within a repository (avoid *matryoshka* repositories!).
-* The changes made within repository folders are being "watched" by Git as mentioned above, but these changes have to be deliberately added to the repository in order to be version controlled or recorded.
-* You can be control the items that Git is "watching". It is best practice to ignore very large datasets, or temp files.
+* Do not create repositories for folders within a repository.
+* The changes made within repository folders are being "watched" by Git as mentioned above, but this does not mean the updates are sent directly over the internet. For this, you will need GitHub desktop. 
+* You can be control the items that Git is "watching". It is best practice to ignore very large datasets, or temp files; sharing these via Git is not recommended (large files can make Git very slow). 
 
 Download the folder we have generated for this session [from here](https://github.com/hbctraining/reproducibility-tools/raw/master/data/example_files.zip), and unzip it in a location of your choosing. We recommend placing it on your Desktop for the duration of this workshop.
 
@@ -79,8 +67,6 @@ There are a number of different ways to add files/folders for Git/GitHub Desktop
 **Method 2:** In GitHub Desktop, if you are already past the `Let's get started!` screen, click `Current repository` in the lefthand side of the repository bar, then in the dropdown menu that appears, click `Add` and select `Create New Repository...`
 
 **Method 3:** In GitHub Desktop, click `File` in the Menu Bar, then select `New Repository...`
-
-**Method 4:** You can also add an existing local repository starting with Method 2 or Method 3 but selecting `Add Existing Repository...` or `Add Local Repository` from the respective dropdown menus and providing the local path of the repository
 
 For this tutorial, we will be using **Method 1**
 
@@ -102,8 +88,7 @@ Fill in the fields as appropriate:
 **Make sure you follow all the steps and instructions listed above!**
 
 >**More on `Git Ignore` and `License` options**
-> * Selecting the **`Git Ignore`** option will create a hidden file caled .gitignore. This file allows you to specify if there are files which you would like to store in your local repository but not store in version control. You can learn more about ignoring files [here](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files)
-> * The **`License`** option lets you add an open-source license to a LICENSE file in your repository. You can find out more about licenses [here](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
+> * Selecting the **`Git Ignore`** option will create a hidden file caled .gitignore. This file allows you to specify if there are files which Git should ignore. For example, you want Git to ignore very large files, because Git can get slow with very large files (for example, a file larger than 10Mb-100Mb). 
 
 Voila! You now have your first Git repo!
 
@@ -130,11 +115,9 @@ Your GitHub Desktop screen should now look like this:
 
 > **Note 1:** The folder should also appear on your Desktop! If you can't find your folder, you can click on `Show in Finder` in the "View the files of your repository in Finder" section on the main screen
 >
-> **Note 2:** files like *.gitattributes* or any files which start with a `.` are hidden files, so they may not be visible in your Finder window by defualt. To view hidden folders in Mac OSX, you can press `Command+Shift+.`
+> **Note 2:** files like *.gitattributes* or any files which start with a `.` are hidden files, so they may not be visible in your File explorer or Finder. You may need to update your settings to make them visible. 
 
 ### Committing Changes
-
-Before we continue, we want to highlight a few research data management best practices: organize your files, structure your folder and name files consistently. We recommend having separate folders for `code` (or `scripts`), `data`, `docs`, `figures`, and `other` to keep your data organized. 
 
 For this workshop, we will add folders (and some files) to our repository. In order to do this, download the examples that we will be working from by right-clicking [this link](https://github.com/hbctraining/reproducibility-tools/raw/master/data/githubdesktop_workshop_materials.zip) and selecting "**Save File As...**" or "**Download Linked File As..**" from the dropdown menu. This should download a zip-compressed (`.zip` file) of the directory that we will be using. You can double-click on the `githubdesktop_workshop_materials.zip` file to uncompress it. Once this has directory has been uncompressed, move the individual folders (`code`, `data`, `docs`, `figures`, and `other`) within this folder into your GitHub Desktop repository within your file browser.
 
@@ -154,7 +137,7 @@ Now, look in your GitHub Desktop application. You can see that these folders and
 
 You'll notice that GitHub Desktop will actually show you any changes you made to these files on the right hand side of the panel. You can click on each file to review these changes.
 
->Note: Wait a minute, where is the `other` folder? Git will ignore folders that are empty. If you would like to make sure Git recognizes an empty folder, you can put a file in it. If you don't want to clutter your empty folders, you can put a hidden file  with a name starting with a `.`, such as `.gitkeep`, in the folder. 
+>Note: Wait a minute, where is the `other` folder? Git will ignore folders that are empty. 
 
 >Note: To the right of each file, you'll see a `+` in a box. This indicates that these are newly added files. If you were to delete a file, you would see a `-`, and if you modify an existing file, you'll see a `dot`
 
@@ -182,7 +165,7 @@ A useful way to think about commits is as the "history" of your project. Each co
 </p>
 
 
-* Think carefully about when to make commits, since the advantages of version control rely on taking snapshots of your changes regularly.
+* We recommend to commit regularly
 * Make the commits "atomic", i.e. **commit a few related changes together**; this will help if you have to revert back to a specific version/snapshot. 
 * Use meaningful **commit summaries** and **messages**, so that your messages/summaries are independently understandable by your collaborators and your future self.
 
@@ -196,38 +179,17 @@ A useful way to think about commits is as the "history" of your project. Each co
 
 We're going to make several sets of changes that reflect the flexibility and capability of a version control system. 
 
+> **Text Editors:**
+>
+> When creating a plain text document, you will want to use a text editor like Sublime Text (Mac) or NotePad++ (Windows) instead of Microscoft Word (!). You will also want to make sure that you save it as plain text. If you don't have time to install these editors now, you can always use TextEdit (Mac) or Notepad (Windows).
+
 Let's open the `README.md` document using our favorite text editor (see note below about text editors) and make this more useful. The information in this document is displayed at the bottom of the main page of your repo when you view it on GitHub (online). The `.md` extension means that this is a text file in ["markdown" format](https://guides.github.com/features/mastering-markdown/), which GitHub automatically renders into readable HTML pages.
 
-> README files are an essential part of any analysis workflow, so that your future self or your collaborators are able to understand what they need to know. Git and GitHub encourage this practice for every repository. [Click here to learn more about README files associated with biomedical datasets/analyses](https://datamanagement.hms.harvard.edu/readme-files).
+> README files are an essential part of any analysis workflow, so that your future self or your collaborators are able to understand what they need to know. 
 
 To open your `README.md` file, you can either click on it directly in File Browser, or you can click the `Open in Sublime Text` (or other text editor if that's your preference) button in the `Open the repository in your external editor` box in the middle of your GitHub Desktop when you are on the "Changes" tab. This will open the whole repository within your text editor, and you can select your README file within the editor from the menu on the left.
 
-Let's turn our `README.md` file for this Git repository into something more meaningful by adding some boilerplate text and helpful information to the small amount of text already there:
-
-```
-## Overview
-Our code will demonstrate the different code snippets that have been used for programming
-classes. We will have this written in both R and Python. 
-
-## Installation
-The full suite of code will require the Tmisc and dplyr R packages; 
-matplotlib and seaborn for Python
-
-## Usage
-Simply fire up RStudio for trying out your R code, or Spyder for your Python code.
-
-## Getting help
-
-## Contributors
-Contributions and references are included in the source code files.
-
-## References
-Contributions and references are included in the source code files.
-
-## Licensing
-This is all available as CC BY 4.0 license. Enjoy!
-```
-
+Open the `README.md` file and add a few sentences to it, such as `Hello Capstone~!`. 
 Save the changes to your file.
 
 Let's also open the `scriptlets.R file` from within the `code` folder. You'll notice we have some template text there as well -- great for reminding you what you need to do when starting to code. Let's flesh out this file by adding these example functions and replacing everything in the file before `# main code` in the original file. Copy & paste this code:
@@ -287,11 +249,7 @@ If you click on these files, you can review the changes you've made. For text-ba
 
 As before, this is GitHub Desktop's way of **adding**/**staging** these changes, but they haven't yet been recorded in an official `snapshot` of your repository. To **commit** these changes to your repository and make an official record of them, you'll need to add a summary and click <kbd>Commit to <b>main</b></kbd>, just as we did before.
 
-> **Text Editors:**
->
-> When creating a plain text document, you will want to use a text editor like Atom, TextMate, TextWrangler, BBEdit, Sublime Text (Mac) or NotePad++ (Windows) instead of Microscoft Word or the default text editors. You will also want to make sure that you save it as plain text. There are a [large number of free and paid text editors available](https://en.wikipedia.org/wiki/List_of_text_editors) to choose from. In a pinch, you can always use TextEdit (Mac) or Notepad (Windows).
-
-In the context of GitHub Desktop when the application **stages** your changes in the local repository, it is similar to the **add** command on the command line interface. You can add several changes in the staging area, and only **commit** when you are ready. 
+**Staging** basically means that you are making your changes ready to be committed. You can add several changes in the staging area, and only **commit** when you are ready. 
 
 Since we wish to keep all the different types of changes as separate commits, we will first commit the documentation change to the README file, and then the code change in the Rscript file. 
 
