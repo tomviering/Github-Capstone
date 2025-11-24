@@ -63,6 +63,3 @@ Dropbox, Google Drive and other services offer some form of version control in t
 
 **Are you done?** Go to the next lesson: [04 GitHub Desktop](https://github.com/tomviering/Github-Capstone/blob/master/lessons/04_GitHub_desktop.md)
 
-* Materials used in these lessons are derived from Daniel van Strien's ["An Introduction to Version Control Using GitHub Desktop,"](http://programminghistorian.org/lessons/getting-started-with-github-desktop), Programming Historian, (17 June 2016). [The Programming Historian ISSN 2397-2068](http://programminghistorian.org/), is released under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
-
-* Materials are also derived from [Software Carpentry instructional material](https://swcarpentry.github.io/git-novice/). These materials are also licensed under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
