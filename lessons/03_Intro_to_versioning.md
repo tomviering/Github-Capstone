@@ -37,11 +37,9 @@ If there aren't any conflicts (i.e updates to the same line), the two sets of ch
 
 ### Version Control Systems and Hosts
 
-There are a lot of [different version control systems available](https://en.wikipedia.org/wiki/List_of_version_control_software). These systems enable you to track changes locally or remotely (easy for collaborations), and there are hosts available for remote management of your "[repositories](https://en.wikipedia.org/wiki/Repository_(version_control))".
+In this class we will be focusing on [Git](https://git-scm.com/). Git is usually used for version control on a local computer and you do not need internet access to use it - so you can also work offline. Only when you want to share your updates on your project (or receive them), you will need to be online. 
 
-In this class we will be focusing on [Git](https://git-scm.com/). Git is usually used for version control on a local computer and you do not need internet access to use it (internet access will be needed to download Git). The local version control setup with Git (or other version control systems) can be connected to an online setup that hosts repositories for sharing and collaboration. 
-
-GitHub is currently the most popular host of open source projects by [number of projects and number of users](https://en.wikipedia.org/wiki/Comparison_of_source_code_hosting_facilities#Popularity). But other hosts exist, including [SourceForge](https://sourceforge.net/), [BitBucket](https://bitbucket.org/), and [Gitlab](https://about.gitlab.com/), to name a few.
+GitHub is currently the most popular host of open source projects and is often used in AI and machine learning. This is why we will use GitHub. 
 
 ## Why use Version Control?
 
@@ -50,19 +48,16 @@ The two main reasons to use version control are to:
 * Manage text/data/code effectively 
 * Collaborate efficiently
 
-Though version control was originally designed for dealing with code for large collaborative projects, there are many benefits to using it in other projects with ***text files*** too (`.txt`, `.csv`, `.tsv`). Some examples of projects making use of version control systems like Git: writing manuscripts, books or dissertations, and for collaboratively developing as well as distributing teaching materials ([e.g. the Github repository for this class](https://github.com/hbctraining/versioning_data_scripts/)).
-
-> Note: Different Version Control systems handle different *non-text files* differently. 
-> In most cases Word documents, graphics files, data objects from R or STATA, etc., can be included but most tools have limited capabilities for saving version information for these. 
+It was originally developed for working on code together. However, it also works well when working on text documents (such as `.txt`,`.md` or `.tex` files). It is not recommended to use Git in combination with Microsoft Word or Powerpoint. 
 
 **Why Not use Dropbox or Google Drive?**
 
-Dropbox, Google Drive and other services offer some form of version control in their systems. There are times when this may be sufficient for your needs. However there are a number of advantages to using a version control system like Git, e.g. facilitating sharing/reproducibility and collaborations. Benefits of collaborating with Version Control include:
+Dropbox, Google Drive and other services offer some form of version control in their systems. Benefits of collaborating with Version Control include:
 
-* Supports both text and programming languages, and gives the user much more control over how code is represented and disseminated
-* Allows comments on every modification making it easier to revert to older version
-* Allows you and others to navigate the history of a document readily
-* Ensures that changes across multiple documents are coordinated and saved together (easy conflict resolution) 
+* Supports both text and programming languages
+* Allows comments on every modification
+* Allows you and others to navigate the history easily
+* Robust conflict resolution (working on the same file does not lead to loss of data)
 
 ***
 
