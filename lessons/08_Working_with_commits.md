@@ -1,13 +1,6 @@
----
-layout: default
-title: "Working with Commits"
-author: "Bob Freeman, Radhika Khetani, Amir Karger, Meeta Mistry, Heather Wick"
----
-
 ## Learning Objectives:
 - Learn how to amend a commit
 - Learn how to revert a commit
-
 
 ## Working with Commits
 
@@ -99,11 +92,4 @@ We will discuss branches more in the next lesson, but the last two options relat
 
 **Cherry Pick Commit** - This will let you take a commit from one branch and transfer it to another branch. This is a great option if you want to merge specific changes from particular branches to main without merging the whole branch.
 
-
----
-
-* Materials used in these lessons are derived from Daniel van Strien's ["An Introduction to Version Control Using GitHub Desktop,"](http://programminghistorian.org/lessons/getting-started-with-github-desktop), Programming Historian, (17 June 2016). [The Programming Historian ISSN 2397-2068](http://programminghistorian.org/), is released under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
-
-* Materials are also derived from [Software Carpentry instructional material](https://swcarpentry.github.io/git-novice/). These materials are also licensed under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
-
-* Materials are also derived from [GitKraken Support for Git Client](https://support.gitkraken.com/start-here/interface/) on GitKraken's website. 
+Done with the lesson? Go to the next: [09 Branches](https://github.com/tomviering/Github-Capstone/blob/master/lessons/09_branches.md)
