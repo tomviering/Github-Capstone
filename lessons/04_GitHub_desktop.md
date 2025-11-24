@@ -1,9 +1,3 @@
----
-layout: default
-title: "Getting Started with Git using GitHub Desktop"
-author: "Meeta Mistry, Heather Wick"
----
-
 ## Learning Objectives
 
 * Describe version control
