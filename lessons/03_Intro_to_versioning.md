@@ -55,5 +55,5 @@ Dropbox, Google Drive and other services offer some form of version control in t
 
 ***
 
-**Are you done?** Go to the next lesson: [04 GitHub Desktop](https://github.com/tomviering/Github-Capstone/blob/master/lessons/04_GitHub_desktop.md)
+Go to the next lesson: [04 GitHub Desktop](https://github.com/tomviering/Github-Capstone/blob/master/lessons/04_GitHub_desktop.md)
 
