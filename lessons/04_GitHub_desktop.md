@@ -56,7 +56,7 @@ Some tips and tricks:
 * The changes made within repository folders are being "watched" by Git as mentioned above, but this does not mean the updates are sent directly over the internet. For this, you will need GitHub desktop. 
 * You can be control the items that Git is "watching". It is best practice to ignore very large datasets, or temp files; sharing these via Git is not recommended (large files can make Git very slow). 
 
-Download the folder we have generated for this session [from here](https://github.com/hbctraining/reproducibility-tools/raw/master/data/example_files.zip), and unzip it in a location of your choosing. We recommend placing it on your Desktop for the duration of this workshop.
+Download the folder we have generated for this session [from here](https://github.com/tomviering/Github-Capstone/raw/refs/heads/master/repo_example_files.zip), and unzip it in a location of your choosing. We recommend placing it on your Desktop for the duration of this workshop.
 
 ### Creating a Folder/Repository, Starting from your Local Machine
 
