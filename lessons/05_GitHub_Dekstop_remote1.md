@@ -1,9 +1,3 @@
----
-layout: default
-title: "Git(hub) Remote"
-author: "Meeta Mistry, Radhika Khetani, Heather Wick"
----
-
 ## Learning Objectives
 * Sync local and remote versions of a Git repository
 * Make changes to a git repository on GitHub (editing, adding and deleting files)
