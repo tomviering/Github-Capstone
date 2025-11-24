@@ -1,9 +1,3 @@
----
-layout: default
-title: "Getting Started with Git using GitHub Desktop"
-author: "Meeta Mistry, Heather Wick"
----
-
 ## Learning Objectives
 
 * Describe version control
@@ -54,7 +48,7 @@ Some tips and tricks:
 * Best practice is to have a separate repository for each project.
 * Do not create repositories for folders within a repository.
 * The changes made within repository folders are being "watched" by Git as mentioned above, but this does not mean the updates are sent directly over the internet. For this, you will need GitHub desktop. 
-* You can be control the items that Git is "watching". It is best practice to ignore very large datasets, or temp files; sharing these via Git is not recommended (large files can make Git very slow). 
+* You can be control the items that Git is "watching". It is best practice to ignore very large datasets, or temporary files; sharing these via Git is not recommended (large files can make Git very slow). 
 
 Download the folder we have generated for this session [from here](https://github.com/tomviering/Github-Capstone/raw/refs/heads/master/repo_example_files.zip), and unzip it in a location of your choosing. We recommend placing it on your Desktop for the duration of this workshop.
 
@@ -329,14 +323,11 @@ Go to <a href="https://github.com">GitHub</a> and left-click your profile pictur
 
 **Exercise #1**
 
-1. Create a repository `learning_github` in GitHub Desktop. Make sure to create it both locally and then publish it remotely onto GitHub.
-2. Find the folder on your local computer, and add a couple of small text files to it from your computer. 
-3. Create a new plain text file called `data-file.txt`, add a line or 2 of content to it and save it to the `learning_github` folder.
-4. Go to GitHub Desktop, commit the change with an appropriate message.
-5. Switch repos back to the `githubdesktop_workshop` repo.
+1. Create a repository `capstone_groupX` in GitHub Desktop. Replace `X` with your group number. Make sure to create it both locally and then publish it remotely onto GitHub.
+2. Find the folder on your local computer, and make a Readme file. 
+3. Go to GitHub Desktop, commit the change with an appropriate message.
+4. Switch repos back to the `githubdesktop_workshop` repo.
 
 ***
 
-*Materials used in these lessons are derived from Daniel van Strien's ["An Introduction to Version Control Using GitHub Desktop,"](http://programminghistorian.org/lessons/getting-started-with-github-desktop), Programming Historian, (17 June 2016). [The Programming Historian ISSN 2397-2068](http://programminghistorian.org/), is released under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
-
-*Materials are also derived from [Software Carpentry instructional material](https://swcarpentry.github.io/git-novice/). These materials are also licensed under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
+**Are you done?** Go to the next lesson: [05 Syncing](https://github.com/tomviering/Github-Capstone/blob/master/lessons/05_GitHub_Dekstop_remote1.md)

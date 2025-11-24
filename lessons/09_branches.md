@@ -1,9 +1,3 @@
----
-layout: default
-title: "Working with branches"
-author: "Heather Wick"
----
-
 ## Learning objectives
 In this lesson you will:
 
@@ -228,8 +222,5 @@ If you click on the **`Pull request`** button in the upper left, you'll be broug
 
 Clicking this button will bring you to a similar screen we saw before when initiating a pull from GitHub Dekstop. Go ahead and create the pull request, then confirm the pull request, just as before. Once you have confirmation that it's been synced, you can `Pull origin` to see that GitHub Desktop will have the merge incorporated to `main`.
 
-***
-
-* Information in these materials derived from docs.github.com and https://www.atlassian.com/git/tutorials/using-branches
 
 

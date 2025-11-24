@@ -1,9 +1,3 @@
----
-layout: default
-title: "Managing Conflicts"
-author: "Bob Freeman, Meeta Mistry, Radhika Khetani, Kathleen Keating, Heather Wick"
----
-
 ## Learning objectives
 * Manage conflicts in git repositories
 
@@ -128,6 +122,4 @@ If you are careful about always syncing changes you will be able to avoid having
 
 ***
 
-* Materials used in these lessons are derived from Daniel van Strien's ["An Introduction to Version Control Using GitHub Desktop,"](http://programminghistorian.org/lessons/getting-started-with-github-desktop), Programming Historian, (17 June 2016). [The Programming Historian ISSN 2397-2068](http://programminghistorian.org/), is released under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
-
-* Materials are also derived from [Software Carpentry instructional material](https://swcarpentry.github.io/git-novice/). These materials are also licensed under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
+Done with the lesson? Go to the next: [08 Commits](https://github.com/tomviering/Github-Capstone/blob/master/lessons/08_Working_with_commits.md)
