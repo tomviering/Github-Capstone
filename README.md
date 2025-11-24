@@ -18,6 +18,7 @@
 [05 Syncing](https://github.com/tomviering/Github-Capstone/blob/master/lessons/05_GitHub_Dekstop_remote1.md)
 
 [07 Conflicts](https://github.com/tomviering/Github-Capstone/blob/master/lessons/07_Managing_conflicts_GitHub_Desktop.md)
+
 [08 Commits](https://github.com/tomviering/Github-Capstone/blob/master/lessons/08_Working_with_commits.md)
 
 [09 Branches](https://github.com/tomviering/Github-Capstone/blob/master/lessons/09_branches.md)
