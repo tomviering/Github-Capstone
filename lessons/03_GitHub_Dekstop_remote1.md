@@ -188,4 +188,4 @@ To return to your `main` branch, simply click the name of the repository at the 
 
 ***
 
-**Are you done?** Go to the next lesson: [07 Conflicts](https://github.com/tomviering/Github-Capstone/blob/master/lessons/07_Managing_conflicts_GitHub_Desktop.md)
+**Are you done?** Go to the next lesson: [04 Conflicts](https://github.com/tomviering/Github-Capstone/blob/master/lessons/04_Managing_conflicts_GitHub_Desktop.md)

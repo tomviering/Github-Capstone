@@ -278,4 +278,4 @@ Go to <a href="https://github.com">GitHub</a> and left-click your profile pictur
 
 ***
 
-**Are you done?** Go to the next lesson: [05 Syncing](https://github.com/tomviering/Github-Capstone/blob/master/lessons/05_GitHub_Dekstop_remote1.md)
+**Are you done?** Go to the next lesson: [03 Syncing](https://github.com/tomviering/Github-Capstone/blob/master/lessons/03_GitHub_Dekstop_remote1.md)

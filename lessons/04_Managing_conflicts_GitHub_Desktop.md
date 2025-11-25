@@ -122,4 +122,4 @@ If you are careful about always syncing changes you will be able to avoid having
 
 ***
 
-Done with the lesson? Go to the next: [08 Commits](https://github.com/tomviering/Github-Capstone/blob/master/lessons/08_Working_with_commits.md)
+Done with the lesson? Go to the next: [05 Commits](https://github.com/tomviering/Github-Capstone/blob/master/lessons/05_Working_with_commits.md)

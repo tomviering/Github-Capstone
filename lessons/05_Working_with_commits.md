@@ -73,7 +73,7 @@ Another option available is to **`Revert Changes in Commit`**. This will create 
 
 At times, there may be the need to go back in history to a previous commit: perhaps you wish to retrieve files that you've deleted or changed, or perhaps you wish to inspect the state of your project and code to inform current work. No matter what it is, like a time machine, Git allows you to move the pointer on your repo to any commit, and it will likewise change the repo files and structure to reflect that.
 
-We realized that deleting the R script (in the [previous lesson](05_GitHub_Dekstop_remote1.md)) was a big mistake. We actually need that code for a subset of our analyses!
+We realized that deleting the R script (in the [previous lesson](03_GitHub_Dekstop_remote1.md)) was a big mistake. We actually need that code for a subset of our analyses!
 
 Now, we want it back. If we go to the `History` tab in GitHub Desktop and right-click on the commit where we deleted `code/Rscript.R`, "Delete code/Rscript.R", we see the option to `Revert Changes in Commit`:
 
@@ -107,4 +107,4 @@ We will discuss branches more in the next lesson, but the last two options relat
 
 **Cherry Pick Commit** - This will let you take a commit from one branch and transfer it to another branch. This is a great option if you want to merge specific changes from particular branches to main without merging the whole branch.
 
-Done with the lesson? Go to the next: [09 Branches](https://github.com/tomviering/Github-Capstone/blob/master/lessons/09_branches.md)
+Done with the lesson? Go to the next: [06 Branches](https://github.com/tomviering/Github-Capstone/blob/master/lessons/06_branches.md)

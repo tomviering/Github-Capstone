@@ -81,40 +81,45 @@ Now, when we create notebook files, they will automatically be ignored by Git, a
 
 ## Converting pipeline.py to a Notebook
 
-Now let's convert our `pipeline.py` file to a Jupyter notebook format. We'll use Jupytext's command-line interface to do this.
+Now let's convert our `pipeline.py` file to a Jupyter notebook format and set up automatic pairing.
 
-**Open a terminal or command prompt** (on Windows, you can use Anaconda Prompt; on Mac/Linux, use Terminal). Make sure your conda environment is activated if you're using one.
+1. **Open VS Code** and navigate to your repository folder (File → Open Folder, or use the `Open in Visual Studio Code` button in GitHub Desktop).
 
-Navigate to your repository's `code` folder. Copy and paste the following command into your terminal, replacing `path/to/your/repository` with the actual path to your repository:
+2. **Install the required extensions**:
+   * Click on the Extensions icon in the left sidebar (or press `Ctrl+Shift+X` / `Cmd+Shift+X` on Mac)
+   * Search for and install:
+     - **"Jupyter"** extension by Microsoft
+     - **"Jupytext Sync"** extension 
+   * You may also want to install the "Python" extension if you haven't already
 
-```bash
-cd path/to/your/repository/code
-```
+3. **Navigate to the `code` folder** in VS Code's file explorer (left sidebar).
 
-For example, if your repository is on your Desktop, the command might look like:
-```bash
-cd ~/Desktop/githubdesktop_workshop/code
-```
+4. **Create a new Jupyter notebook**: 
+   * Right-click in the `code` folder in the file explorer
+   * Select "New File"
+   * Name it `pipeline.ipynb` (make sure it has the `.ipynb` extension and the same base name as `pipeline.py`)
 
-Now, let's convert `pipeline.py` to a notebook format and set up the pairing. **Copy and paste this command into your terminal:**
+5. **Open both files**: Open both `pipeline.py` and `pipeline.ipynb` in VS Code (you can have them in separate tabs).
 
-```bash
-jupytext --set-formats ipynb,py:percent pipeline.py
-```
+6. **Copy the code from `pipeline.py` to the notebook**:
+   * In `pipeline.py`, select all the code (`Ctrl+A` / `Cmd+A`) and copy it (`Ctrl+C` / `Cmd+C`)
+   * In `pipeline.ipynb`, paste the code into the first cell
 
-This command will:
-1. Create a `pipeline.ipynb` file from your `pipeline.py`
-2. Update `pipeline.py` to include the percent format markers (`# %%`)
-3. Set up the pairing so changes to either file sync to the other
+7. **Save the notebook** (`Ctrl+S` / `Cmd+S`).
 
-After running this command, if you open `pipeline.py` in a text editor, you should see it now has cell markers like this. Note that your file may look slightly different depending on the modifications you've made in previous lessons (such as docstrings, data shape checks, etc.):
+8. **The Jupytext Sync extension will automatically pair them**: Because you have the `.jupytext.toml` configuration file in your repository root with `default_jupytext_formats = "ipynb,py:percent"`, the Jupytext Sync extension will automatically detect that these files should be paired. 
+
+   When you save either file, changes will automatically sync to the other! The extension reads your `.jupytext.toml` configuration, so it knows how to pair the files.
+
+9. **Verify the pairing**: After saving, the `pipeline.py` file should automatically be updated with `# %%` cell markers. You can check this by looking at `pipeline.py` - it should now have cell markers separating the code sections.
+
+
+After the pairing is set up and you've saved the notebook, if you open `pipeline.py` in a text editor, you should see it now has cell markers like this. Note that your file may look slightly different depending on the modifications you've made in previous lessons and how you split up the code into cells:
 
 ```python
 # ---
 # jupyter:
 #   jupytext:
-#     cell_metadata_filter: -all
-#     formats: ipynb,py:percent
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -122,96 +127,66 @@ After running this command, if you open `pipeline.py` in a text editor, you shou
 #       jupytext_version: 1.18.1
 # ---
 
-# %%
+# %% vscode={"languageId": "plaintext"}
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import mean_absolute_error
-from preprocessing import preprocess_data
 
-# %% [markdown]
-# Machine learning pipeline for predicting football player wages.
-# Uses K-Nearest Neighbors regression with standardized features.
-
-# %% [markdown]
-# --- 1. Load data and define features and target ---
-
-# %%
+# %% vscode={"languageId": "plaintext"}
+# 1. Load data + define features and target
 df = pd.read_csv('../data/football_wages.csv')
 
-# %%
-# Use preprocessing function to separate features and target
-X, y = preprocess_data(df)
+# Drop categorical column and target
+X = df.drop(columns=["log_wages", "nationality_name"])
+y = df["log_wages"]
 
-# %% [markdown]
-# --- 2. Train / test split ---
-
-# %%
+# %% vscode={"languageId": "plaintext"}
+# 2. Train / test split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y,
     test_size=0.2,
     random_state=42
 )
 
-# %% [markdown]
-# --- 3. Build a simple pipeline: scale -> KNN regressor ---
-
-# %%
+# %% vscode={"languageId": "plaintext"}
+# 3. Build KNN pipeline
 knn_pipeline = Pipeline(steps=[
     ("scaler", StandardScaler()),
     ("knn", KNeighborsRegressor(n_neighbors=5))
 ])
 
-# %% [markdown]
-# --- 4. Train ---
-
-# %%
+# %% vscode={"languageId": "plaintext"}
+# 4. Train the model
 knn_pipeline.fit(X_train, y_train)
 
-# %% [markdown]
-# --- 5. Evaluate using MAE ---
-
-# %%
+# %% vscode={"languageId": "plaintext"}
+# 5. Evaluate using MAE
 y_pred = knn_pipeline.predict(X_test)
 mae = mean_absolute_error(y_test, y_pred)
 
-# %%
 print(f"Mean Absolute Error (MAE) on test set: {mae:.4f}")
+
+# %%
 
 ```
 
 Notice how each section is now separated by `# %%` markers. These markers indicate cell boundaries in the notebook.
 
-## Opening and Editing in VS Code
+## Working with the Paired Notebook in VS Code
 
-Now that we have the notebook file, you can open it in VS Code. VS Code has excellent support for Jupyter notebooks through an extension.
+Now that the pairing is set up, you can work with the notebook just like any other Jupyter notebook. VS Code will automatically recognize it and display it with notebook features. You should see your code organized into cells, with each cell corresponding to a section marked by `# %%` in the Python file.
 
-1. **Install the Jupyter extension**:
-   * Open VS Code
-   * Click on the Extensions icon in the left sidebar (or press `Ctrl+Shift+X` / `Cmd+Shift+X` on Mac)
-   * Search for "Jupyter" in the extensions marketplace
-   * Install the "Jupyter" extension by Microsoft
-   * You may also want to install the "Python" extension if you haven't already
-
-2. **Open VS Code** and navigate to your repository folder (File → Open Folder, or use the `Open in Visual Studio Code` button in GitHub Desktop).
-
-2. **Navigate to the `code` folder** in VS Code's file explorer (left sidebar) and click on `pipeline.ipynb` to open it.
-
-3. VS Code will automatically recognize it as a Jupyter notebook and display it with notebook features. You should see your code organized into cells, with each cell corresponding to a section marked by `# %%` in the Python file.
-
-4. You can now:
-   * **Run cells individually** by clicking the "Run Cell" button above each cell, or use `Shift + Enter`
-   * **Add markdown cells** for documentation by clicking the "+ Markdown" button
-   * **Add new code cells** by clicking the "+ Code" button
-   * **Modify existing cells** by clicking on them and editing directly
-   * **See cell outputs** displayed inline below each cell
+You can now:
+* **Run cells individually** by clicking the "Run Cell" button above each cell, or use `Shift + Enter`
+* **Add markdown cells** for documentation by clicking the "+ Markdown" button
+* **Add new code cells** by clicking the "+ Code" button
+* **Modify existing cells** by clicking on them and editing directly
+* **See cell outputs** displayed inline below each cell
 
 > **Note**: If VS Code prompts you to select a Python interpreter, make sure to select your conda environment (the one where you installed Jupytext). You can do this by clicking on the Python version in the bottom-right corner of VS Code, or by pressing `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac) and typing "Python: Select Interpreter".
-
-
-Any changes you make in VS Code will automatically sync to the `pipeline.py` file (and vice versa) because of the pairing we set up.
 
 ## Working with the Converted File in Git
 
@@ -224,16 +199,15 @@ Click on `pipeline.py` to see the diff. Notice how readable the changes are! Ins
 
 This is exactly what makes Jupytext so useful for version control. The changes are now in a human-readable format.
 
-Let's make a small edit to demonstrate. Open `pipeline.py` in your text editor and change the number of neighbors in the KNN regressor:
+Let's make a small edit to demonstrate. In the `pipeline.ipynb` notebook, find the cell that contains the pipeline definition and change the number of neighbors in the KNN regressor from 5 to 10:
 
 ```python
-# %%
 knn_pipeline = Pipeline(steps=[
     ("scaler", StandardScaler()),
     ("knn", KNeighborsRegressor(n_neighbors=10))  # Changed from 5 to 10
 ])
 ```
 
-Save the file and go back to GitHub Desktop. You'll see the change clearly displayed in the diff view. The change is easy to read and understand - you can see exactly what line was modified and what the change was.
+Save the notebook. The Jupytext Sync extension will automatically sync this change to the `pipeline.py` file. Now go back to GitHub Desktop and check the `Changes` tab. You'll see the change clearly displayed in the diff view for `pipeline.py`. The change is easy to read and understand - you can see exactly what line was modified and what the change was.
 
 Now commit this change with an appropriate message, such as "Convert pipeline.py to Jupyter notebook format using Jupytext" or "Add Jupytext cell markers to pipeline.py".

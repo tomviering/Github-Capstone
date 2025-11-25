@@ -11,19 +11,19 @@
 
 ### Lessons
 
-[03 Introduction](https://github.com/tomviering/Github-Capstone/blob/master/lessons/03_Intro_to_versioning.md)
+[01 Introduction](https://github.com/tomviering/Github-Capstone/blob/master/lessons/01_Intro_to_versioning.md)
 
-[04 GitHub Desktop](https://github.com/tomviering/Github-Capstone/blob/master/lessons/04_GitHub_desktop.md)
+[02 GitHub Desktop](https://github.com/tomviering/Github-Capstone/blob/master/lessons/02_GitHub_desktop.md)
 
-[05 Syncing](https://github.com/tomviering/Github-Capstone/blob/master/lessons/05_GitHub_Dekstop_remote1.md)
+[03 Syncing](https://github.com/tomviering/Github-Capstone/blob/master/lessons/03_GitHub_Dekstop_remote1.md)
 
-[07 Conflicts](https://github.com/tomviering/Github-Capstone/blob/master/lessons/07_Managing_conflicts_GitHub_Desktop.md)
+[04 Conflicts](https://github.com/tomviering/Github-Capstone/blob/master/lessons/04_Managing_conflicts_GitHub_Desktop.md)
 
-[08 Commits](https://github.com/tomviering/Github-Capstone/blob/master/lessons/08_Working_with_commits.md)
+[05 Commits](https://github.com/tomviering/Github-Capstone/blob/master/lessons/05_Working_with_commits.md)
 
-[09 Branches](https://github.com/tomviering/Github-Capstone/blob/master/lessons/09_branches.md)
+[06 Branches](https://github.com/tomviering/Github-Capstone/blob/master/lessons/06_branches.md)
 
-[10 Jupyter Notebooks with Jupytext](https://github.com/tomviering/Github-Capstone/blob/master/lessons/10_Jupyter_Notebooks_Jupytext.md)
+[07 Jupyter Notebooks with Jupytext](https://github.com/tomviering/Github-Capstone/blob/master/lessons/07_Jupyter_Notebooks_Jupytext.md)
 
 
 ## Preperation

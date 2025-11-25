@@ -228,5 +228,5 @@ Clicking this button will bring you to a similar screen we saw before when initi
 
 ***
 
-Done with the lesson? Go to the next: [10 Jupyter Notebooks with Jupytext](https://github.com/tomviering/Github-Capstone/blob/master/lessons/10_Jupyter_Notebooks_Jupytext.md)
+Done with the lesson? Go to the next: [07 Jupyter Notebooks with Jupytext](https://github.com/tomviering/Github-Capstone/blob/master/lessons/07_Jupyter_Notebooks_Jupytext.md)
 
