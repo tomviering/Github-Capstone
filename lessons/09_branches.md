@@ -60,11 +60,13 @@ For now though, let's stay in `test_branch`
 
 ## Making changes (commits) to your new branch
 
-Making a change to a branch is just like making a change to `main`. Let's give it a try. Navigate to the `Changes` tab on the left and then click the button to `Open the repository in your external editor`. Go to your `README.md` and add this line under the first header and save the readme file:
+Making a change to a branch is just like making a change to `main`. Let's give it a try. Navigate to the `Changes` tab on the left and then click the button to `Open the repository in your external editor`. Go to your `pipeline.py` file in the `code` folder and add a comment at the top of the file (after the imports) to indicate this is an experimental version:
 
 ```
-This line of code was introduced in the lesson on branches!
+# Experimental branch: testing new features
 ```
+
+Save the file.
 
 <p align="center">
   <img src="../img/9.GHD_change_readme.png" width="800">
@@ -76,11 +78,11 @@ Just as before, you'll immediately see the change in the `Changes` tab. Go ahead
   <img src="../img/9.GHD_commit_branch.png" width="800">
 </p>
 
-And that's all there is to it! If you were to set your `Current Branch` to `main` and open your `README.md` file in your external text editor, that line of text we added would not be there, because the change we made is unique to `test_branch`. Go ahead and see for yourself!
+And that's all there is to it! If you were to set your `Current Branch` to `main` and open your `pipeline.py` file in your external text editor, that comment we added would not be there, because the change we made is unique to `test_branch`. Go ahead and see for yourself!
 
 ### Publishing/pushing your branch to GitHub
 
-One last step: let's publish our new branch to GitHub. From the main `Changes` tab, click the **`Publish branch`** button to publish it to Remote. Be sure if your branch is `test_branch` and not `main` if you had switched it to the `main` branch inspect the `README.md`.
+One last step: let's publish our new branch to GitHub. From the main `Changes` tab, click the **`Publish branch`** button to publish it to Remote. Be sure if your branch is `test_branch` and not `main` if you had switched it to the `main` branch inspect the `pipeline.py` file.
 
 <p align="center">
   <img src="../img/9.GHD_publish_branch.png" width="800">
@@ -174,7 +176,7 @@ Now we still have to sync our remote origin with our local repo. You'll see you 
   <img src="../img/9.GHD_pull_origin_merge.png" width="800">
 </p>
 
-Go ahead and click `Pull origin` and then navigate to your `History` tab, and you'll see the commit from `test_branch` which updated the `README.md` file as well as the commit which merged the two branches:
+Go ahead and click `Pull origin` and then navigate to your `History` tab, and you'll see the commit from `test_branch` which updated the `pipeline.py` file as well as the commit which merged the two branches:
 
 <p align="center">
   <img src="../img/9.GHD_pull_origin_merge_history.png" width="800">
@@ -196,11 +198,13 @@ Once you've created your branch, you can even see the new branch on GitHub Deskt
   <img src="../img/9.GHD_create_branch_github_3.png" width="800">
 </p>
 
-Let's try making a change to this branch. Add the following line to your `README.md` file on GitHub, then observe any changes to your local repo in GitHub Desktop.
+Let's try making a change to this branch. Navigate to the `code` folder and open `pipeline.py` on GitHub, then click the edit button. Add the following comment at the top of the file (after the imports):
 
 ```
- This line was introduced on my remote branch!
+# Remote branch experiment
 ```
+
+Commit the change, then observe any changes to your local repo in GitHub Desktop.
 
 <p align="center">
   <img src="../img/9.GHD_create_branch_github_4.png" width="800">
@@ -222,5 +226,7 @@ If you click on the **`Pull request`** button in the upper left, you'll be broug
 
 Clicking this button will bring you to a similar screen we saw before when initiating a pull from GitHub Dekstop. Go ahead and create the pull request, then confirm the pull request, just as before. Once you have confirmation that it's been synced, you can `Pull origin` to see that GitHub Desktop will have the merge incorporated to `main`.
 
+***
 
+Done with the lesson? Go to the next: [10 Jupyter Notebooks with Jupytext](https://github.com/tomviering/Github-Capstone/blob/master/lessons/10_Jupyter_Notebooks_Jupytext.md)
 

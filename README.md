@@ -23,6 +23,8 @@
 
 [09 Branches](https://github.com/tomviering/Github-Capstone/blob/master/lessons/09_branches.md)
 
+[10 Jupyter Notebooks with Jupytext](https://github.com/tomviering/Github-Capstone/blob/master/lessons/10_Jupyter_Notebooks_Jupytext.md)
+
 
 ## Preperation
 
@@ -31,7 +33,7 @@ Please [download and install GitHub Desktop](https://desktop.github.com/download
 ### Github account
 Create an account for yourself on [GitHub](https://github.com/). Please be sure to select the free/academic account, as this option has more long-term flexibility.
 ### VS Code
-Install [VS Code](https://code.visualstudio.com/). This is the code editor uses nowadays.
+Install [VS Code](https://code.visualstudio.com/). This is the code editor everyone uses nowadays.
 
 ***
 *These materials have been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*

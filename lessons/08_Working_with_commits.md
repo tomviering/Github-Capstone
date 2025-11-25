@@ -10,7 +10,16 @@ Sometimes a simple commit isn't that simple: you've forgotten something, you nee
 
 Oops! Pushed 'Commit' button too fast? 
 
-Perhaps you noticed errors in your commit message, or decided it was not worded correctly. Or maybe you wanted to make a few changes to the file before you had gone ahead and pressed commit. Good news! As long as you have not updated any remotes, you can amend the last commit message, add additional changes, or both. To do this you need to first make some changes in your repo. Open up your `example_Rcode.R`, and remove the "Hello world!" chunk of code and save. 
+Perhaps you noticed errors in your commit message, or decided it was not worded correctly. Or maybe you wanted to make a few changes to the file before you had gone ahead and pressed commit. Good news! As long as you have not updated any remotes, you can amend the last commit message, add additional changes, or both. To do this you need to first make some changes in your repo. Open up your `pipeline.py` file in the `code` folder, and add a docstring at the very top of the file (right after the imports) to document what this script does. Add the following:
+
+```
+"""
+Machine learning pipeline for predicting football player wages.
+Uses K-Nearest Neighbors regression with standardized features.
+"""
+```
+
+Save the file. 
 
 Now stage the change, and commit with a message.
 
@@ -18,7 +27,13 @@ Now stage the change, and commit with a message.
   <img src="../img/8.GHD_commit_typo.png" width="800">
 </p>
 
-Oh no! There is a typo in our commit message. Also we realized that we should have also removed the `square_it` code. Open up your `example_Rcode.R` again, and this time remove the chunk of code for `square_it` and save the file again. 
+Oh no! There is a typo in our commit message. Also we realized that we should have also added a data shape check to help with debugging. Open up your `pipeline.py` file again, and this time add a line right after loading the data (after `df = pd.read_csv('../data/football_wages.csv')`) to print the shape of the dataframe:
+
+```
+print(f"Data shape: {df.shape}")
+```
+
+Save the file again. 
 
 Now go back to your GitHub Desktop window and click history tab and right click the most recent commit, and select the "Amend commit" from the drop down menu:
 
@@ -58,19 +73,19 @@ Another option available is to **`Revert Changes in Commit`**. This will create 
 
 At times, there may be the need to go back in history to a previous commit: perhaps you wish to retrieve files that you've deleted or changed, or perhaps you wish to inspect the state of your project and code to inform current work. No matter what it is, like a time machine, Git allows you to move the pointer on your repo to any commit, and it will likewise change the repo files and structure to reflect that.
 
-We realized that deleting all of the Python script (in the [the previous lesson](06_Github_remote2.md)) was a big mistake. We actually need that code for a subset of our analyses!
+We realized that deleting the R script (in the [previous lesson](05_GitHub_Dekstop_remote1.md)) was a big mistake. We actually need that code for a subset of our analyses!
 
-Now, we want it back. If we go to the `History` tab in GitHub Desktop and right-click on the commit where we deleted `code/example_python.py`, "Delete code/example_python.py", we see the option to `Revert Changes in Commit`:
+Now, we want it back. If we go to the `History` tab in GitHub Desktop and right-click on the commit where we deleted `code/Rscript.R`, "Delete code/Rscript.R", we see the option to `Revert Changes in Commit`:
 
 <p align="center">
   <img src="../img/8.GHD_revert_commit.png" width="800" align="center">
 </p>
 
-If you select that, GitHub Desktop will immediately make a new commit, called `Revert Delete code/example_python.py` with a changed file all in green -- that's because we're adding that file back in after deleting it in that older commit:
+If you select that, GitHub Desktop will immediately make a new commit, called `Revert Delete code/Rscript.R` with a changed file all in green -- that's because we're adding that file back in after deleting it in that older commit:
 
 <img src="../img/8.GHD_revert_commit_2.png" width="800" align="center">
 
-Go ahead and `Push to origin` and then go back to your GitHub repo. Voila! `code/example_python.py` has been restored!
+Go ahead and `Push to origin` and then go back to your GitHub repo. Voila! `code/Rscript.R` has been restored!
 
 <p align="center">
   <img src="../img/8.GHD_revert_commit_visible_web.png" width="800" align="center">

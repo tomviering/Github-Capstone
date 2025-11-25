@@ -30,27 +30,34 @@ In GitHub Desktop and standard Git workflows, this is accomplished by regular, i
 
 We now have our work both locally on our computers and online in the GitHub web interface. So far any edits we have made to our files have been directly on the local versions and then we pushed the changes to the online repository. It is also possible to **make a change to your repository on the web interface**. 
 
-To demonstrate how to do this, we will edit one of the files in our **`code`** folder. Inside this folder we have several scripts and we realized that we forgot to give attribution to our functions in the `util_functions.R` file.
+To demonstrate how to do this, we will edit one of the files in our **`code`** folder. Inside this folder we have several scripts and we realized that we forgot to give attribution to our functions in the `preprocessing.py` file.
 
 Navigate to the **githubdesktop_workshop** repository online in GitHub.
 
-Go into the `code` directory, and click on the name of the file (`util_functions.R`) in the title area. This will take you to a new page showing your document.
+Go into the `code` directory, and click on the name of the file (`preprocessing.py`) in the title area. This will take you to a new page showing your document.
 
 Click on the 'Edit' option or the pencil icon in the top right-hand corner of the document. You will now be able to edit the file and add some new text. **We are going to make two edits to this file!**
 
-1. We want to add some comments above the "Square function". This comment provides the resources from which we obtained and adapted this code. You can **copy the text provided below and paste it into your document**.
+1. We want to add some comments above the `preprocess_data` function. This comment provides the resources from which we obtained and adapted this code. You can **copy the text provided below and paste it into your document**.
 
 ```
-# Square function
-# adapted from https://hbctraining.github.io/Intro-to-R/lessons/03_introR-functions-and-arguments.html#user-defined-functions
-# and https://www.r-bloggers.com/how-to-write-and-debug-an-r-function/
+# Preprocess data function
+# adapted from https://scikit-learn.org/stable/modules/preprocessing.html
+# and https://pandas.pydata.org/docs/user_guide/basics.html
 ```
 
-2. Next, we will do a similar thing for the and the "Anscombe's quartet function". The **text you need to add is provided below**.
+2. Next, we will add a docstring to document the function parameters and return values. The **text you need to add is provided below**.
 
 ```
-# Anscombe's quartet
-# Examples from https://www.r-bloggers.com/using-and-abusing-data-visualization-anscombes-quartet-and-cheating-bonferroni/
+"""
+Preprocesses the input dataframe by separating features and target variable.
+
+Args:
+    df: Input dataframe containing features and target variable
+    
+Returns:
+    Tuple of (X, y) where X is the feature matrix and y is the target vector
+"""
 ```
 <p align="center">
   <img src="../img/2.GHD_edit_utils.png" width="800" align="center">
@@ -68,7 +75,7 @@ Once you have made some changes to your file, **click the green** <kbd><b>Commit
 
 One can also add and delete files from the repositiory online. To do this, you will first need to view the file itself (by clicking on the file's name). Once you are viewing your file you will see a trashcan icon at the top right-hand side, located to the right of the edit/pencil icon. 
 
-Let's delete one of the files in our `code` folder. Since we're working in R, we will remove the python code file. Click on the `example_python.py` file, then click the `...` button in the top right of the screen and select `Delete file`:
+Let's delete one of the files in our `code` folder. Since we're working in Python, we will remove the R code file. Click on the `Rscript.R` file, then click the `...` button in the top right of the screen and select `Delete file`:
 
 <p align="center">
   <img src="../img/2.GHD_delete_py.png" width="800" align="center">
@@ -86,13 +93,15 @@ We can also **add files and folders to the repository via the web interface**. T
 
 ### Uploading files
 
-We'll start with adding files through upload. In your **github_desktop_workshop** repository on GitHub, navigate to the `docs` folder. On this page you will see all of its contents listed, and in the upper right you will see an <kbd><b>Add File</b></kbd> button. If you click on this, you will see two dropdown options appear: `Create new file` and `Upload files`. **Select `Upload files`**. This will take you to a new page.
+We'll start with adding files through upload. First, we need to create a `docs` folder. In your **githubdesktop_workshop** repository on GitHub, click the <kbd><b>Add file</b></kbd> button in the upper right, then select **`Create new file`**. In the file path box, type `docs/README.md` (this will create the `docs` folder and a README file in it). Add some text like "Documentation folder" and commit this file to create the folder.
+
+Now navigate to the `docs` folder you just created. On this page you will see all of its contents listed, and in the upper right you will see an <kbd><b>Add File</b></kbd> button. If you click on this, you will see two dropdown options appear: `Create new file` and `Upload files`. **Select `Upload files`**. This will take you to a new page.
 
 <p align="center">
   <img src="../img/2.GHD_upload_files.png" width="800" align="center">
 </p>
   
-The file that **we would like to add to this folder** is called **"Pi Formulas -- from Wolfram MathWorld.pdf"**. The document is located in our **github_desktop_workshop_materials** folder which you downloaded and unzipped earlier. To add it to the repo using the web interface, you can do one of two things:
+For this example, you can upload any PDF file you have on your computer, or create a simple text file. To add a file to the repo using the web interface, you can do one of two things:
 
 1. Find the file in a File Browser window on your computer and then drag and drop it on to this page.
 2. Click on the "choose your files" and find/select the file in the window that pops up. 
@@ -103,7 +112,7 @@ Once the file is selected, the Upload will require a Description and subsequent 
   <img src="../img/2.GHD_upload_files_2.png" width="800" align="center">
 </p>
 
-After committing, you will be brought back to the main page of your repository, and you'll see your latest commits. If you navigate to the `docs` folder, you should now see the `Pi Formulas...` document there.
+After committing, you will be brought back to the main page of your repository, and you'll see your latest commits. If you navigate to the `docs` folder, you should now see the file you uploaded there.
 
 <p align="center">
   <img src="../img/2.GHD_latest_commits_after_upload.png" width="800" align="center">
@@ -142,7 +151,7 @@ One very useful feature of GitHub and GitHub Desktop is the ability to see how a
 
 We've already seen how you can view changes made to files (highlighted in red and green) in GitHub Desktop in a given commit. It's also possible to view a file's entire history through GitHub.
 
-On the repository page of GitHub, navigate to the file whose history you would like to view. In this case, let's go to `scriptlets.R` inside of our `code` directory.
+On the repository page of GitHub, navigate to the file whose history you would like to view. In this case, let's go to `pipeline.py` inside of our `code` directory.
 
 <p align="center">
   <img src="../img/2.GHD_view_file_history_web.png" width="700" align="center">
@@ -154,7 +163,7 @@ You'll notice in the upper right there is a `History` button with a symbol of a 
   <img src="../img/2.GHD_view_file_history_web_2.png" width="700" align="center">
 </p>
 
-You'lll notice that for each commit, there are a series of icons on the right hand side. One looks like a **document with `< >`** and the other is simply **`< >`**. Clicking these icons let you see the version of the file in that commit, or the whole repo as it looked in that commit, respectively. Let's click on the **document with `< >`** icon to see the version of `scriptlets.R` from the `Update scriptlets.R` commit. Notice that in the upper left, the button that usually says `main` now has an alphanumeric code. This code represents a snapshot of your repo at the time of this commit:
+You'lll notice that for each commit, there are a series of icons on the right hand side. One looks like a **document with `< >`** and the other is simply **`< >`**. Clicking these icons let you see the version of the file in that commit, or the whole repo as it looked in that commit, respectively. Let's click on the **document with `< >`** icon to see the version of `pipeline.py` from the `Update pipeline.py` commit. Notice that in the upper left, the button that usually says `main` now has an alphanumeric code. This code represents a snapshot of your repo at the time of this commit:
 
 <p align="center">
   <img src="../img/2.GHD_view_file_history_scriptlets.png" width="800" align="center">

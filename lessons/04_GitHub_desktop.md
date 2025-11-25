@@ -113,9 +113,7 @@ Your GitHub Desktop screen should now look like this:
 
 ### Committing Changes
 
-For this workshop, we will add folders (and some files) to our repository. In order to do this, download the examples that we will be working from by right-clicking [this link](https://github.com/hbctraining/reproducibility-tools/raw/master/data/githubdesktop_workshop_materials.zip) and selecting "**Save File As...**" or "**Download Linked File As..**" from the dropdown menu. This should download a zip-compressed (`.zip` file) of the directory that we will be using. You can double-click on the `githubdesktop_workshop_materials.zip` file to uncompress it. Once this has directory has been uncompressed, move the individual folders (`code`, `data`, `docs`, `figures`, and `other`) within this folder into your GitHub Desktop repository within your file browser.
-
->**Note: only move the folders _inside_ of `githubdesktop_workshop_materials`, but do not move the parent `githubdesktop_workshop_materials` folder itself or the `util_functions.R` or `Pi Formulas -- from Wolfram MathWorld.pdf` files in that folder -- we will get to those file later**
+For this workshop, we will be working with the example repository files. The repository should already contain the `code` and `data` folders with example files. If you're starting from the `repo_example_files` folder, these folders are already in place.
 
 In Finder, your repository should look like this:
 
@@ -131,7 +129,7 @@ Now, look in your GitHub Desktop application. You can see that these folders and
 
 You'll notice that GitHub Desktop will actually show you any changes you made to these files on the right hand side of the panel. You can click on each file to review these changes.
 
->Note: Wait a minute, where is the `other` folder? Git will ignore folders that are empty. 
+>Note: Wait a minute, where is the `reports` folder? Git will ignore folders that are empty. 
 
 >Note: To the right of each file, you'll see a `+` in a box. This indicates that these are newly added files. If you were to delete a file, you would see a `-`, and if you modify an existing file, you'll see a `dot`
 
@@ -175,65 +173,21 @@ We're going to make several sets of changes that reflect the flexibility and cap
 
 > **Text Editors:**
 >
-> When creating a plain text document, you will want to use a text editor like Sublime Text (Mac) or NotePad++ (Windows) instead of Microscoft Word (!). You will also want to make sure that you save it as plain text. If you don't have time to install these editors now, you can always use TextEdit (Mac) or Notepad (Windows).
+> When creating a plain text document, you will want to use a text editor like VS Code, Sublime Text (Mac) or NotePad++ (Windows) instead of Microscoft Word (!). You will also want to make sure that you save it as plain text. If you don't have time to install these editors now, you can always use TextEdit (Mac) or Notepad (Windows).
 
-Let's open the `README.md` document using our favorite text editor (see note below about text editors) and make this more useful. The information in this document is displayed at the bottom of the main page of your repo when you view it on GitHub (online). The `.md` extension means that this is a text file in ["markdown" format](https://guides.github.com/features/mastering-markdown/), which GitHub automatically renders into readable HTML pages.
+Let's open the `README.md` document using our favorite text editor (see note above about text editors) and make this more useful. The information in this document is displayed at the bottom of the main page of your repo when you view it on GitHub (online). The `.md` extension means that this is a text file in ["markdown" format](https://guides.github.com/features/mastering-markdown/), which GitHub automatically renders into readable HTML pages.
 
 > README files are an essential part of any analysis workflow, so that your future self or your collaborators are able to understand what they need to know. 
 
-To open your `README.md` file, you can either click on it directly in File Browser, or you can click the `Open in Sublime Text` (or other text editor if that's your preference) button in the `Open the repository in your external editor` box in the middle of your GitHub Desktop when you are on the "Changes" tab. This will open the whole repository within your text editor, and you can select your README file within the editor from the menu on the left.
+To open your `README.md` file, you can either click on it directly in File Browser, or you can click the `Open in Visual Studio Code` (or other text editor if that's your preference) button in the `Open the repository in your external editor` box in the middle of your GitHub Desktop when you are on the "Changes" tab. This will open the whole repository within your text editor, and you can select your README file within the editor from the menu on the left.
 
-Open the `README.md` file and add a few sentences to it, such as `Hello Capstone~!`. 
+Open the `README.md` file and add your own name to the list of group members.
 Save the changes to your file.
 
-Let's also open the `scriptlets.R file` from within the `code` folder. You'll notice we have some template text there as well -- great for reminding you what you need to do when starting to code. Let's flesh out this file by adding these example functions and replacing everything in the file before `# main code` in the original file. Copy & paste this code:
+Let's also open the `pipeline.py file` from within the `code` folder. You'll notice we have a working ML pipeline here.
+Update the code such that the `age` column is also dropped from the dataframe.
 
-```
-#!/usr/bin/env Rscript
-
-# This script will include a collection of small scripts steps
-# often seen as example code. We're using this solely for demo purposes
-
-# Put globals, installs, and sources here
-source("./util_functions.R")
-
-# Put functions here
-# 1. Prints hello world
-
-myString <- "Hello, World!"
-
-print (myString)
-
-
-# 2. Square function
-# adapted from https://hbctraining.github.io/Intro-to-R/lessons/03_introR-functions-and-arguments.html#user-defined-functions
-# and https://www.r-bloggers.com/how-to-write-and-debug-an-r-function/
-
-square_it <- function(x){
-  sq <- x*x
-  return(sq)
-}
-
-square_it(5)
-
-
-# 3. Monte Carlo Pi
-
-for (trials in 1:3000) {
-  count = 0
-  for(i in 1:trials) {
-    if((runif(1,0,1)^2 + runif(1,0,1)^2) < 1) {
-      count = count + 1
-    }
-  }
-  print(paste(trials, ": ", (count*4) / trials))
-}
-
-
-# main code
-```
-
-Save this file as well, and go back to GitHub Desktop. You'll see that your README.md and scriptlets.R files are in the left-hand panel with the modified indicator to the right of the file: 
+Save this file as well, and go back to GitHub Desktop. You'll see that your README.md and pipeline.py files are in the left-hand panel with the modified indicator to the right of the file: 
 
 <p align="center">
     <img src="../img/2.GHD_modified_files.png" width="800" align="center">
@@ -245,15 +199,15 @@ As before, this is GitHub Desktop's way of **adding**/**staging** these changes,
 
 **Staging** basically means that you are making your changes ready to be committed. You can add several changes in the staging area, and only **commit** when you are ready. 
 
-Since we wish to keep all the different types of changes as separate commits, we will first commit the documentation change to the README file, and then the code change in the Rscript file. 
+Since we wish to keep all the different types of changes as separate commits, we will first commit the documentation change to the README file, and then the code change in the python file. 
 
-First, deselect the `scriptlets.R` file so only the `README.md` file has a checkbox, and, as we did with our previous initial commit, include a summary message (you'll notice that GitHub Desktop has conveniently suggested `Update README.md` for us), and click on the Commit button:
+First, deselect the `pipeline.py` file so only the `README.md` file has a checkbox, and, as we did with our previous initial commit, include a summary message (you'll notice that GitHub Desktop has conveniently suggested `Update README.md` for us), and click on the Commit button:
 
 <p align="center">
     <img src="../img/2.GHD_commit_readme.png" width="800" align="center">
 </p>
 
-Again, you'll see this latest commit in the lower left hand corner. Now, select the changed R file and include a meaningful change message (feel free to use the one suggested by GitHub Desktop), and click <kbd>Commit to <b>main</b></kbd>. You'll see the latest commit in the lower left again. 
+Again, you'll see this latest commit in the lower left hand corner. Now, select the changed python file and include a meaningful change message (feel free to use the one suggested by GitHub Desktop), and click <kbd>Commit to <b>main</b></kbd>. You'll see the latest commit in the lower left again. 
 
 But what if we want to see our previous commits? We can access all of our previous commits by clicking the `History` tab in the left hand panel:
 
@@ -263,38 +217,32 @@ But what if we want to see our previous commits? We can access all of our previo
 
 There may be times, however, when we wish to ensure that we save a coordinated set of changes. For example, if we want to make coordinated changes to multiple files it makes sense to make the changes and then stage (add) and commit all the updated files all together (**atomic commit**). 
 
-Let's say we want to update the code in the `scriplets.R` file to the following wherein we want to use the `util_functions.R` in the code. Remember that the `util_functions.R` is the Rscript file we left behind in the `githubdesktop_workshop_materials` folder we had downloaded. 
+Let's say we want to refactor our code by extracting the data preprocessing logic into a separate module. We'll update the `pipeline.py` file to import a preprocessing function and create a new `preprocessing.py` file to contain that function. 
 
-1. Let's update the `scriplets.R` file with the following information and save it:
+1. Let's update the part 1 of `pipeline.py` file with the following and save it:
 
-```R
-#!/usr/bin/env Rscript
+```Py
+from preprocessing import preprocess_data
 
-# This script will include a collection of small scripts steps
-# often seen as example code. We're using this solely for demo purposes
+# --- 1. Define features and target ---
 
-# Put globals, installs, and sources here
-source("./util_functions.R")
+df = pd.read_csv('../data/football_wages.csv')
 
-# Put functions here
-#   1. Prints hello world
-hello_world <- function() {
-  myString <- "Hello, World!"
-  print (myString)
-}
-
-# main code
-
-hello_world()
-
-square_it(10)
-
-montecarloPi(3000)
-
-# END
+# Drop categorical columns (here: nationality_name) and the target from X
+X, y = preprocess_data(df)
 ```
 
-2. Now, let's move the `util_functions.R` script file from the `githubdesktop_workshop_materials` into the `code` folder in our new repo.
+2. Now, let's create a new file `preprocessing.py` in the code folder. Put the following code in there and save it:
+
+```Py
+import pandas as pd
+from typing import Tuple
+
+def preprocess_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series]:
+    X = df.drop(columns=["log_wages", "nationality_name", "age"])
+    y = df["log_wages"]
+    return X, y
+```
 
 When we return to the GitHub Desktop application, it has noticed the two changes. Since the change in the main code file depends on the presence of this other file, we need to ensure this commit (snapshot) captures these inter-dependent changes. So, let's keep both files selected for staging, give a meaningful commit message reflecting this process, and then commit! 
 
