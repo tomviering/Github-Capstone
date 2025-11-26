@@ -73,19 +73,19 @@ Another option available is to **`Revert Changes in Commit`**. This will create 
 
 At times, there may be the need to go back in history to a previous commit: perhaps you wish to retrieve files that you've deleted or changed, or perhaps you wish to inspect the state of your project and code to inform current work. No matter what it is, like a time machine, Git allows you to move the pointer on your repo to any commit, and it will likewise change the repo files and structure to reflect that.
 
-We realized that deleting the R script (in the [previous lesson](03_GitHub_Dekstop_remote1.md)) was a big mistake. We actually need that code for a subset of our analyses!
+We realized that deleting the data file (in the [previous lesson](03_GitHub_Dekstop_remote1.md)) was a big mistake. We actually need that file for a subset of our analyses!
 
-Now, we want it back. If we go to the `History` tab in GitHub Desktop and right-click on the commit where we deleted `code/Rscript.R`, "Delete code/Rscript.R", we see the option to `Revert Changes in Commit`:
+Now, we want it back. If we go to the `History` tab in GitHub Desktop and right-click on the commit where we deleted `data/very_important_file.csv`, "Delete data/very_important_file.csv", we see the option to `Revert Changes in Commit`:
 
 <p align="center">
   <img src="../img/8.GHD_revert_commit.png" width="800" align="center">
 </p>
 
-If you select that, GitHub Desktop will immediately make a new commit, called `Revert Delete code/Rscript.R` with a changed file all in green -- that's because we're adding that file back in after deleting it in that older commit:
+If you select that, GitHub Desktop will immediately make a new commit, called `Revert Delete data/very_important_file.csv` with a changed file all in green -- that's because we're adding that file back in after deleting it in that older commit:
 
 <img src="../img/8.GHD_revert_commit_2.png" width="800" align="center">
 
-Go ahead and `Push to origin` and then go back to your GitHub repo. Voila! `code/Rscript.R` has been restored!
+Go ahead and `Push to origin` and then go back to your GitHub repo. Voila! `data/very_important_file.csv` has been restored!
 
 <p align="center">
   <img src="../img/8.GHD_revert_commit_visible_web.png" width="800" align="center">

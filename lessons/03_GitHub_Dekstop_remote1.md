@@ -75,7 +75,7 @@ Once you have made some changes to your file, **click the green** <kbd><b>Commit
 
 One can also add and delete files from the repositiory online. To do this, you will first need to view the file itself (by clicking on the file's name). Once you are viewing your file you will see a trashcan icon at the top right-hand side, located to the right of the edit/pencil icon. 
 
-Let's delete one of the files in our `code` folder. Since we're working in Python, we will remove the R code file. Click on the `Rscript.R` file, then click the `...` button in the top right of the screen and select `Delete file`:
+Let's delete one of the files in our `data` folder. Click on the `very_important_file.csv` file in the `data` folder, then click the `...` button in the top right of the screen and select `Delete file`:
 
 <p align="center">
   <img src="../img/2.GHD_delete_py.png" width="800" align="center">
