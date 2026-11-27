@@ -210,7 +210,7 @@ Commit the change, then observe any changes to your local repo in GitHub Desktop
   <img src="../img/9.GHD_create_branch_github_4.png" width="800">
 </p>
 
-You'll see these changes are automatically pushed to the your local `remote_test_branch` and are visble on GitHub.
+These changes are now on GitHub, but not yet on your computer. To get them locally, click `Fetch origin` in GitHub Desktop, switch to `remote_test_branch` using `Current Branch`, and click `Pull origin`.
 
 <p align="center">
   <img src="../img/9.GHD_create_branch_github_5.png" width="800">

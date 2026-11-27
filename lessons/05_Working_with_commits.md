@@ -41,7 +41,7 @@ Now go back to your GitHub Desktop window and click history tab and right click 
   <img src="../img/8.GHD_ammend_commit_1.png" width="800" align="center">
 </p>
 
-You'll note that the previous commit message is copied into the Message and Description fields. This is your chance to edit the commit message you previously made a typo on. And you can amend the commit with additional changes, which we did by removing additional code: 
+You'll note that the previous commit message is copied into the Message and Description fields. This is your chance to edit the commit message you previously made a typo on. And you can amend the commit with additional changes, which we did by adding the data shape check: 
 
 <p align="center">
   <img src="../img/8.GHD_ammend_commit_2.1.png" width="800" align="center">

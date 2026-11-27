@@ -115,10 +115,10 @@ If you are careful about always syncing changes you will be able to avoid having
 
 ***
 
-**Exercise #3**
+**Exercise #2**
 
-1. For the "learning_github" repo you generated earlier, create a conflict within the "data-file.txt" file by making changes locally and remotely.
-2. Resolve the conflict and commit.
+1. For the `capstone_groupX` repo you created in Exercise #1, create a conflict within the `README.md` file by making changes locally and remotely.
+2. Resolve the conflict, commit, and push.
 
 ***
 

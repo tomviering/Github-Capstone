@@ -53,7 +53,7 @@ Jupytext can be configured to automatically pair notebooks with text files. For 
 Create a configuration file called `.jupytext.toml` in the root of your repository (the same folder where your `README.md` is located). Add the following content:
 
 ```toml
-default_jupytext_formats = "ipynb,py:percent"
+formats = "ipynb,py:percent"
 ```
 
 This configuration tells Jupytext to:
@@ -107,7 +107,7 @@ Now let's convert our `pipeline.py` file to a Jupyter notebook format and set up
 
 7. **Save the notebook** (`Ctrl+S` / `Cmd+S`).
 
-8. **The Jupytext Sync extension will automatically pair them**: Because you have the `.jupytext.toml` configuration file in your repository root with `default_jupytext_formats = "ipynb,py:percent"`, the Jupytext Sync extension will automatically detect that these files should be paired. 
+8. **The Jupytext Sync extension will automatically pair them**: Because you have the `.jupytext.toml` configuration file in your repository root with `formats = "ipynb,py:percent"`, the Jupytext Sync extension will automatically detect that these files should be paired. 
 
    When you save either file, changes will automatically sync to the other! The extension reads your `.jupytext.toml` configuration, so it knows how to pair the files.
 

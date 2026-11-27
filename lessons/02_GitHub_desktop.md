@@ -113,7 +113,7 @@ Your GitHub Desktop screen should now look like this:
 
 ### Committing Changes
 
-For this workshop, we will be working with the example repository files. The repository should already contain the `code` and `data` folders with example files. If you're starting from the `repo_example_files` folder, these folders are already in place.
+For this workshop, we will be working with the example files you downloaded and unzipped earlier. In your file browser (Finder on Mac, File Explorer on Windows), open the unzipped `repo_example_files` folder and copy everything inside it (the `code`, `data` and `reports` folders and the `README.md` file) into your new `githubdesktop_workshop` folder. When asked, replace the existing `README.md`. If you also see a `__MACOSX` folder, you can ignore it.
 
 In Finder, your repository should look like this:
 

@@ -73,7 +73,7 @@ Once you have made some changes to your file, **click the green** <kbd><b>Commit
 
 ## Deleting files online
 
-One can also add and delete files from the repositiory online. To do this, you will first need to view the file itself (by clicking on the file's name). Once you are viewing your file you will see a trashcan icon at the top right-hand side, located to the right of the edit/pencil icon. 
+One can also add and delete files from the repository online. To do this, you will first need to view the file itself (by clicking on the file's name). Once you are viewing your file, you can delete it from the `...` menu at the top right-hand side. 
 
 Let's delete one of the files in our `data` folder. Click on the `very_important_file.csv` file in the `data` folder, then click the `...` button in the top right of the screen and select `Delete file`:
 
@@ -120,7 +120,7 @@ After committing, you will be brought back to the main page of your repository, 
 
 ## Syncing remote changes to your local repository via Pull
 
-Let's return to our local machine and apply the changes we made online to our local repo. GitHub Desktop has already noticed that our remote repo has changed, and is now prompting that you can `Pull 2 commits form the origin remote` which is highlighted in a blue box with a <kbd><b>Pull origin</b></kbd> button in blue (you can also see that the repository bar has a `Pull origin` option and tells you when the repo was most recently **fetched**.
+Let's return to our local machine and apply the changes we made online to our local repo. GitHub Desktop has already noticed that our remote repo has changed, and is now prompting that you can `Pull 4 commits from the origin remote` which is highlighted in a blue box with a <kbd><b>Pull origin</b></kbd> button in blue (you can also see that the repository bar has a `Pull origin` option and tells you when the repo was most recently **fetched**.
 
 > Note: **fetch** and **pull** are similar concepts with some important differences. When a repo is **fetched** from remote, it will note changes to your repo but not merge/commit them to your local directory. When you **pull**, it will note these changes **and** merge/commit them to your local directory.
 
